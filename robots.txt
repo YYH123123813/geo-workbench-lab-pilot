@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yyh123123813.github.io/geo-workbench-lab-pilot/sitemap.xml
