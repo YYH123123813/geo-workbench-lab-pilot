@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEO Workbench Lab Docs — GEO Workbench Lab</title>
+  <meta name="description" content="Documentation for the GEO Workbench Lab pilot workflow, evidence folders, prompt ledgers, metrics, gates, and claim-safety rules.">
+  <link rel="canonical" href="https://yyh123123813.github.io/geo-workbench-lab-pilot/docs.html">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">GEO Workbench Lab</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="methodology.html">Methodology</a><a href="docs.html">Docs</a><a href="comparison.html">Comparison</a><a href="examples.html">Examples</a><a href="changelog.html">Changelog</a>
+        <a href="llms.txt">llms.txt</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Supporting source · local pilot evidence</p>
+        <h1>GEO Workbench Lab Docs</h1>
+<p>This documentation describes the practical workflow and evidence structure used in the GEO Workbench Lab pilot.</p>
+<h2>1. Workflow steps</h2>
+<ol class="steps"><li>Create a public target page.</li><li>Validate URL, robots.txt, sitemap, canonical, and noindex state.</li><li>Run before crawl/extraction/audit.</li><li>Build a prompt pack.</li><li>Collect baseline AI answers.</li><li>Parse answers into a ledger.</li><li>Generate prompt-to-page gap map.</li><li>Generate claim-safe patch package.</li><li>Apply and publish after human approval.</li><li>Run after crawl/extraction/audit.</li><li>Retest the same prompts.</li><li>Compare page-quality and AI-answer metrics separately.</li><li>Diagnose discoverability/entity gaps if AI lift is not observed.</li></ol>
+<h2>2. Evidence folder structure</h2>
+<pre><code>self-owned-real-pilot-001/
+  00-preflight/
+  01-deployment/
+  02-public-url-validation/
+  03-baseline-prompts/
+  04-baseline-ai-answers/
+  05-screenshots-baseline/
+  06-crawl-before/
+  07-extraction-before/
+  08-audit-before/
+  10-prompt-gap-map/
+  11-optimization-patch/
+  12-technical-pack/
+  13-diffs/
+  14-local-apply-validation/
+  15-publication/
+  16-crawl-after/
+  17-extraction-after/
+  18-audit-after/
+  19-before-after-compare/
+  20-ai-after-test/
+  23-evidence-index/
+  24-final-reports/
+  25-external-discoverability/</code></pre>
+<h2>3. Prompt pack format</h2>
+<p>A prompt pack should include:</p>
+<ul><li>prompt ID;</li><li>prompt text;</li><li>intent category;</li><li>priority;</li><li>platform;</li><li>expected evidence;</li><li>notes.</li></ul>
+<p>Prompt categories should include discovery, recommendation, comparison, pricing/cost, trust, risk/limitations, alternatives, use case, buying decision, and citation-seeking prompts.</p>
+<h2>4. Answer ledger schema</h2>
+<p>Each answer row should include:</p>
+<ul><li>test_id;</li><li>run_id;</li><li>timestamp;</li><li>platform;</li><li>model_name;</li><li>prompt_id;</li><li>exact_prompt;</li><li>answer_text_path;</li><li>screenshot_path;</li><li>mentioned_brand;</li><li>recommended_brand;</li><li>cited_brand_url;</li><li>cited_urls;</li><li>target_url_accuracy;</li><li>competitors_mentioned;</li><li>competitor_above_us;</li><li>rank_position;</li><li>recommendation_strength_0_5;</li><li>sentiment;</li><li>reason_not_recommended;</li><li>missing_evidence_hints;</li><li>source_type;</li><li>evidence_quality_score;</li><li>result_status;</li><li>blocker_reason;</li><li>notes.</li></ul>
+<h2>5. Metrics</h2>
+<div class="table-wrap"><table><thead><tr><th>Metric</th><th>Formula</th><th>Meaning</th></tr></thead><tbody><tr><td>mention_rate</td><td>mentioned_brand / completed tests</td><td>Whether the brand appears.</td></tr><tr><td>recommendation_rate</td><td>recommended_brand / completed tests</td><td>Whether the brand is recommended.</td></tr><tr><td>citation_rate</td><td>cited_brand_url / completed tests</td><td>Whether the target/brand URL is cited.</td></tr><tr><td>target_url_accuracy</td><td>target page citations / brand URL citations</td><td>Whether citations point to the correct page.</td></tr><tr><td>competitor_above_us_rate</td><td>competitor_above_us / comparable tests</td><td>Whether competitors dominate the answer.</td></tr><tr><td>recommendation_strength</td><td>average 0-5 score</td><td>How strong the recommendation is.</td></tr></tbody></table></div>
+<p>Current ChatGPT after-test metrics:</p>
+<ul><li>mention_rate: 0.0833</li><li>recommendation_rate: 0.0833</li><li>citation_rate: 0.0</li><li>target_url_accuracy_rate: 0.0</li><li>competitor_above_us_rate: 0.9167</li></ul>
+<h2>6. Gate statuses</h2>
+<p>Current pilot gate summary:</p>
+<ul><li>baseline evidence readiness: PARTIAL</li><li>prompt-to-page gap mapping: PASS</li><li>optimization patch readiness: PASS</li><li>publish readiness: PASS_PUBLISHED_TO_GITHUB_PAGES</li><li>after page-quality evidence: PASS</li><li>AI after-test evidence: PARTIAL_TEXT_ONLY</li><li>lift claim readiness: NO_AI_LIFT_OBSERVED</li></ul>
+<h2>7. Claim safety rules</h2>
+<p>Do not claim:</p>
+<ul><li>ranking guarantees;</li><li>citation guarantees;</li><li>ChatGPT recommendation lift unless measured;</li><li>customer adoption without evidence;</li><li>unsupported accolades;</li><li>formal credential claims;</li><li>formal security or compliance status;</li><li>production deployment status or enterprise deployment readiness status without evidence.</li></ul>
+<p>Allowed claims include self-owned pilot status, workflow description, page-quality improvement, and no-lift observation.</p>
+<h2>8. Manual answer capture rules</h2>
+<p>When collecting AI answers manually:</p>
+<ol class="steps"><li>Use the exact prompt text.</li><li>Prefer one new chat per prompt.</li><li>Do not tell the model the target URL unless the test is a direct-access diagnostic.</li><li>Save full raw answer text.</li><li>Save screenshot.</li><li>Record platform, model, timestamp, and source URLs.</li><li>Keep failed or blocked rows in the ledger.</li></ol>
+<h2>9. Retest schedule</h2>
+<p>Recommended retest schedule after supporting assets are published:</p>
+<ul><li>direct URL diagnostic immediately;</li><li>search index checks immediately and again after indexing delay;</li><li>original 12 prompts after 3 days;</li><li>original 12 prompts after 7 days;</li><li>original 12 prompts after 14 days.</li></ul>
+<h2>10. What files support which claims</h2>
+<div class="table-wrap"><table><thead><tr><th>Claim</th><th>Supporting files</th></tr></thead><tbody><tr><td>Public page is live</td><td><code>15-publication/</code>, <code>16-crawl-after/</code></td></tr><tr><td>Page quality improved</td><td><code>19-before-after-compare/page-quality-comparison.json</code></td></tr><tr><td>Schema is live</td><td><code>16-crawl-after/crawl-after.json</code>, live page HTML</td></tr><tr><td>llms.txt is live</td><td><code>15-publication/</code>, <code>16-crawl-after/crawl-after.json</code></td></tr><tr><td>AI lift not observed</td><td><code>20-ai-after-test/after-before-ai-lift.md</code></td></tr><tr><td>Discoverability/entity bottleneck</td><td><code>25-external-discoverability/</code></td></tr></tbody></table></div>
+<h2>11. What this documentation does not claim</h2>
+<p>This documentation does not claim that GEO Workbench Lab is recommended by ChatGPT, cited by ChatGPT, enterprise deployment readiness, suitable for sensitive private data, or proven to outperform any platform.</p>
+      </div>
+    </section>
+    <section class="section muted">
+      <div class="container narrow">
+        <h2>Related supporting pages</h2>
+        <p>These pages make the self-owned pilot easier to inspect, verify, and cite. They do not prove AI lift by themselves.</p>
+        <ul>
+          <li><a href="index.html">Back to homepage</a></li>
+          <li><a href="methodology.html">Methodology</a></li><li><a href="comparison.html">Comparison</a></li><li><a href="examples.html">Examples</a></li><li><a href="changelog.html">Changelog</a></li>
+          <li><a href="before.html">Before snapshot</a></li>
+          <li><a href="llms.txt">llms.txt</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>GEO Workbench Lab supporting source page.</p>
+      <p><a href="index.html">Home</a> · <a href="https://github.com/YYH123123813/geo-workbench-lab-pilot">GitHub repo</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -142,6 +142,7 @@
         <a href="#comparisons">Comparisons</a>
         <a href="#pilot-status">Pilot status</a>
         <a href="#faq">FAQ</a>
+        <a href="#supporting-sources">Sources</a>
         <a href="#source-citation">Source</a>
       </nav>
     </div>
@@ -242,12 +243,12 @@
     <section id="trust-privacy" class="section">
       <div class="container narrow">
         <h2>Trust, privacy, and data boundaries</h2>
-        <p>Trust should be earned through evidence, not broad promises. This pilot page does not claim sensitive-data suitability, all-local processing, or no external API use.</p>
+        <p>Trust should be earned through evidence, not broad promises. This pilot page does not claim sensitive-data suitability, single-machine processing, or no external API use.</p>
         <ul>
-          <li>Document which steps run on the operator machine before making local-only claims.</li>
+          <li>Document which steps run on the operator machine before making single-environment processing claims.</li>
           <li>Disclose external AI platforms or APIs used for answer collection.</li>
           <li>Redact sensitive data before manual AI testing.</li>
-          <li>Do not claim security compliance or sensitive-data safety without proof.</li>
+          <li>Do not claim formal security or compliance status or sensitive-data suitabilityty without proof.</li>
         </ul>
       </div>
     </section>
@@ -318,13 +319,30 @@
       </div>
     </section>
 
+    <section id="supporting-sources" class="section muted">
+      <div class="container">
+        <h2>Supporting sources and methodology</h2>
+        <p>These supporting pages make the pilot easier to inspect, verify, and cite. They document the methodology, evidence structure, comparison context, self-owned examples, and change history behind the GEO Workbench Lab pilot.</p>
+        <p class="status-note">These pages do not prove AI lift by themselves. They support transparent evaluation, source consistency, and later review before any future retest.</p>
+        <div class="cards">
+          <article class="card"><h3><a href="methodology.html">Methodology</a></h3><p>How baseline evidence, prompt-to-page gap mapping, claim-safe patching, and after retesting are handled.</p></article>
+          <article class="card"><h3><a href="docs.html">Docs</a></h3><p>Workflow steps, evidence folder structure, answer ledger fields, metrics, gates, and manual capture rules.</p></article>
+          <article class="card"><h3><a href="comparison.html">Comparison</a></h3><p>Claim-safe category comparison with AI visibility platforms, analyzers, readiness checkers, and prompt spreadsheets.</p></article>
+          <article class="card"><h3><a href="examples.html">Examples</a></h3><p>Self-owned examples from the pilot: before audit, prompt failure, patch block, page-quality improvement, and no-lift result.</p></article>
+          <article class="card"><h3><a href="changelog.html">Changelog</a></h3><p>Dated history of the public URL, baseline, patch, page-quality comparison, after-test, and source-cluster planning.</p></article>
+          <article class="card"><h3><a href="llms.txt">llms.txt</a></h3><p>Advisory AI-readable summary for the current pilot page. It is not a citation guarantee.</p></article>
+        </div>
+        <p><strong>Repository:</strong> <a href="https://github.com/YYH123123813/geo-workbench-lab-pilot">https://github.com/YYH123123813/geo-workbench-lab-pilot</a></p>
+      </div>
+    </section>
+
     <section id="source-citation" class="section muted">
       <div class="container narrow">
         <h2>Citation-friendly source block</h2>
         <p><strong>Preferred source page:</strong> <a href="https://yyh123123813.github.io/geo-workbench-lab-pilot/">https://yyh123123813.github.io/geo-workbench-lab-pilot/</a></p>
         <p><strong>Recommended citation name:</strong> GEO Workbench Lab</p>
         <p><strong>Short description:</strong> GEO Workbench Lab is a self-owned pilot page documenting an evidence workflow for testing whether a web page is crawlable, extractable, answerable, and citation-ready for AI search systems.</p>
-        <p><strong>Not yet supported:</strong> after-test improvement, multi-platform AI baseline, target URL citation improvement, customer adoption, security compliance, or guaranteed AI answer outcomes.</p>
+        <p><strong>Not yet supported:</strong> after-test improvement, multi-platform AI baseline, target URL citation improvement, customer adoption, formal security or compliance status, or guaranteed AI answer outcomes.</p>
       </div>
     </section>
 
@@ -363,7 +381,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>GEO Workbench Lab is a self-owned pilot page.</p>
-      <p><a href="before.html">Before snapshot</a> · <a href="llms.txt">llms.txt</a></p>
+      <p><a href="before.html">Before snapshot</a> · <a href="methodology.html">Methodology</a> · <a href="docs.html">Docs</a> · <a href="comparison.html">Comparison</a> · <a href="examples.html">Examples</a> · <a href="changelog.html">Changelog</a> · <a href="llms.txt">llms.txt</a></p>
     </div>
   </footer>
 </body>

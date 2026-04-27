@@ -26,8 +26,8 @@ What the page does not claim:
 - It does not promise AI answer outcomes.
 - It does not promise target URL citations.
 - It does not claim multi-platform lift.
-- It does not claim customer adoption, awards, reviews, or security compliance.
-- It does not claim all processing is local unless evidence is provided.
+- It does not claim customer adoption, awards, reviews, or formal security or compliance status.
+- It does not claim single-machine processing unless evidence is provided.
 - It does not publish commercial pricing or plan limits on this pilot page.
 
 Evidence limitations:

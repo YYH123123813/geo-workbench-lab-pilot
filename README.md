@@ -1,140 +1,177 @@
 # GEO Workbench Lab Pilot
 
-This repository contains the intentionally weak `before` page for a self-owned real GEO pilot.
+GEO Workbench Lab is a self-owned public pilot for testing a claim-safe GEO workflow: crawl a page, extract its content, audit its page-quality signals, collect AI answer evidence, map prompt failures to page gaps, prepare a reviewed optimization patch, publish changes, and retest.
 
-Project: GEO Workbench Lab  
-Product: GEO Workbench  
-Goal: test whether a local GEO Optimization Platform can take a weak public web page and improve crawlability, extractability, answerability, citation readiness, prompt coverage, and AI-search visibility signals.
+Live page: https://yyh123123813.github.io/geo-workbench-lab-pilot/
 
-## Why this page is intentionally weak
+Repository: https://github.com/YYH123123813/geo-workbench-lab-pilot
 
-The before page is meant to be a realistic early-stage startup landing page, not a broken page. It should be crawlable and readable, but under-optimized for GEO.
+## What GEO Workbench Lab is
 
-It intentionally lacks:
+GEO Workbench Lab is a public test project for studying whether a page is prepared for AI search visibility evidence collection. It focuses on controllable signals:
 
-- strong answer block
-- detailed target audience section
-- use case sections
-- comparison table
-- pricing / limitations section
-- trust / evidence block
-- expanded FAQ
-- schema JSON-LD
-- llms.txt
-- detailed citation-friendly facts
-- strong internal links
-- off-page evidence references
+- crawlability
+- extractability
+- answerability
+- prompt-to-page gap mapping
+- claim-safe page patching
+- structured source content
+- llms.txt documentation
+- before/after retesting
 
-This creates a clean baseline for the GEO platform to diagnose and improve.
+It does not guarantee AI ranking, mentions, recommendations, or citations.
 
-## Files
+## What this pilot tested
 
-- `index.html` — weak before page for deployment
-- `before.html` — archived copy of the same weak before page
-- `assets/style.css` — lightweight local CSS
-- `robots.txt` — allows crawling
-- `sitemap.xml` — placeholder GitHub Pages sitemap
-- `pilot-materials/` — prompt pack, baseline test plan, ledger template, and deployment checklist
+This pilot tested whether a weak public page could be transformed into a stronger source-like page and whether that page-quality improvement would translate into immediate ChatGPT visibility lift.
 
-## Deploy to GitHub Pages
+The workflow covered:
 
-1. Create a new public GitHub repository named `geo-workbench-lab-pilot`.
-2. Copy this folder's contents into the repository root.
-3. Commit and push to the `main` branch.
-4. Open GitHub repository settings.
-5. Go to Pages.
-6. Choose `Deploy from branch`.
-7. Select branch `main` and folder `/root`.
-8. Save.
-9. Wait for GitHub Pages to publish.
-10. Expected URL:
+1. before page publication;
+2. public URL validation;
+3. before crawl, extraction, and audit;
+4. 12 manually collected ChatGPT baseline answers;
+5. prompt-to-page gap mapping;
+6. claim-safe optimization patch generation;
+7. local patch application and validation;
+8. GitHub Pages publication;
+9. after crawl, extraction, and audit;
+10. 12-prompt ChatGPT after-test;
+11. before/after metric comparison;
+12. external discoverability diagnosis.
+
+## Public and local review URLs
+
+Current published assets:
+
+- Live optimized page: https://yyh123123813.github.io/geo-workbench-lab-pilot/
+- Before snapshot: https://yyh123123813.github.io/geo-workbench-lab-pilot/before.html
+- llms.txt: https://yyh123123813.github.io/geo-workbench-lab-pilot/llms.txt
+
+Supporting pages added locally in the source-cluster phase:
+
+- Methodology: ./methodology.html
+- Docs: ./docs.html
+- Comparison: ./comparison.html
+- Examples: ./examples.html
+- Changelog: ./changelog.html
+
+Expected public URLs after a future publish step:
+
+- Methodology: https://yyh123123813.github.io/geo-workbench-lab-pilot/methodology.html
+- Docs: https://yyh123123813.github.io/geo-workbench-lab-pilot/docs.html
+- Comparison: https://yyh123123813.github.io/geo-workbench-lab-pilot/comparison.html
+- Examples: https://yyh123123813.github.io/geo-workbench-lab-pilot/examples.html
+- Changelog: https://yyh123123813.github.io/geo-workbench-lab-pilot/changelog.html
+
+This local phase does not push or publish those supporting pages.
+
+## What improved
+
+The page-quality layer improved:
+
+| Signal | Before | After |
+|---|---:|---:|
+| Page audit score | 60 | 95 |
+| Schema JSON-LD blocks | 0 | 1 |
+| llms.txt status | 404 | 200 |
+| FAQ item count | 3 | 7 |
+| Table count | 0 | 2 |
+| H2 count | 4 | 14 |
+
+The after page is public, crawlable, canonicalized, and structured with visible FAQ and comparison tables.
+
+## What did not improve
+
+The immediate ChatGPT after-test did not observe natural AI lift:
+
+| Metric | Before | After |
+|---|---:|---:|
+| mention_rate | 0.0833 | 0.0833 |
+| recommendation_rate | 0.0833 | 0.0833 |
+| citation_rate | 0.0 | 0.0 |
+| target_url_accuracy_rate | 0.0 | 0.0 |
+| competitor_above_us_rate | 0.9167 | 0.9167 |
+
+The after-test was ChatGPT-only, manually pasted, screenshot-missing, and model-unknown. It is useful directional evidence, not full enterprise-grade proof.
+
+## Current interpretation
+
+The current bottleneck appears to be external discoverability and entity evidence rather than landing-page quality. ChatGPT can read the target URL when the URL is supplied, but it does not naturally surface GEO Workbench Lab in generic discovery and recommendation prompts.
+
+## Evidence folder concept
+
+The pilot keeps evidence in a structured local folder:
 
 ```text
-https://YOUR_USERNAME.github.io/geo-workbench-lab-pilot/
+self-owned-real-pilot-001/
+  04-baseline-ai-answers/
+  06-crawl-before/
+  07-extraction-before/
+  08-audit-before/
+  10-prompt-gap-map/
+  11-optimization-patch/
+  12-technical-pack/
+  14-local-apply-validation/
+  15-publication/
+  16-crawl-after/
+  17-extraction-after/
+  18-audit-after/
+  19-before-after-compare/
+  20-ai-after-test/
+  24-final-reports/
+  25-external-discoverability/
 ```
 
-After deployment, replace `YOUR_USERNAME` in `robots.txt` and `sitemap.xml` with your real GitHub username.
+The evidence folder makes the workflow auditable and helps separate page-quality claims from AI-lift claims.
 
-## Deploy to Vercel
-
-1. Push this folder to a GitHub repository.
-2. Open Vercel.
-3. Import the repository.
-4. Use the default static deployment settings.
-5. Deploy.
-6. Expected URL:
+## Repository structure
 
 ```text
-https://geo-workbench-lab-pilot.vercel.app/
+geo-workbench-lab-pilot/
+  index.html          # optimized public page
+  before.html         # preserved weak before snapshot
+  llms.txt            # advisory AI-readable summary
+  sitemap.xml         # crawl discovery file
+  robots.txt          # crawl permission file
+  assets/style.css    # local CSS
+  pilot-materials/    # prompt pack and baseline materials
 ```
 
-If you use Vercel, update `robots.txt` and `sitemap.xml` to the Vercel production URL.
-
-## Local preview
-
-From this folder, run:
-
-```bash
-python3 -m http.server 8088
-```
-
-Open:
+Supporting assets added locally:
 
 ```text
-http://127.0.0.1:8088/
+methodology.html
+docs.html
+comparison.html
+examples.html
+changelog.html
 ```
 
-Stop the server with `Ctrl+C`.
+## How to run a similar self-owned pilot
 
-## Evidence to collect before optimization
+1. Create a weak but crawlable public page.
+2. Validate URL, robots, sitemap, and noindex state.
+3. Run before crawl, extraction, and page-quality audit.
+4. Collect a fixed prompt baseline from AI systems.
+5. Save raw answer text, screenshots, platform, model, timestamp, and exact prompt.
+6. Map prompt failures to missing page sections and evidence gaps.
+7. Generate a claim-safe patch package.
+8. Apply and publish only after review.
+9. Run after crawl, extraction, and audit.
+10. Retest the same prompts.
+11. Report page-quality lift separately from AI answer lift.
 
-Before changing the page, collect:
+## Limitations
 
-- public target URL
-- deployment timestamp
-- before commit hash
-- before page screenshot
-- crawl result
-- extraction result
-- audit result
-- prompt pack used
-- baseline answer ledger
-- raw AI platform answers
-- baseline AI platform screenshots where possible
+- This pilot is self-owned; it is not a customer case study.
+- It does not prove ChatGPT ranking improvement.
+- It does not prove citation improvement.
+- It does not prove multi-platform visibility lift.
+- It provides no multi-platform proof.
+- It does not claim formal security or compliance status or sensitive-data suitability.
+- It does not claim production deployment status or enterprise deployment readiness.
 
-## Do not add these yet
+## No ranking guarantee
 
-Do not add these before the baseline test:
-
-- `llms.txt`
-- schema JSON-LD
-- expanded FAQ
-- comparison table
-- detailed trust block
-- pricing / limitations block
-- citation-ready evidence section
-- optimized answer block
-
-Those should be generated or recommended by the GEO platform after diagnosis.
-
-## What the GEO platform should discover
-
-The platform should detect:
-
-- unclear category definition
-- weak answerability
-- thin FAQ
-- no comparison table
-- no trust block
-- no pricing / limitations
-- no schema
-- no llms.txt
-- weak citation readiness
-- weak prompt coverage
-- missing target audience detail
-- weak use-case coverage
-
-## Current baseline status
-
-This package does not claim any real AI platform result.
-No real crawl, AI answer, citation, or screenshot evidence is included yet.
+GEO Workbench Lab does not guarantee that ChatGPT, Perplexity, Gemini, Google AI Overviews, or any other AI system will mention, recommend, rank, or cite a page. It helps test and improve controllable evidence signals, then measures what actually happens.

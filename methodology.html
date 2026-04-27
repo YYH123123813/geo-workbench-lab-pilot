@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEO Workbench Lab Methodology — GEO Workbench Lab</title>
+  <meta name="description" content="Methodology for the GEO Workbench Lab self-owned pilot: baseline evidence, prompt-to-page gap mapping, claim-safe patching, after audit, and no-lift result.">
+  <link rel="canonical" href="https://yyh123123813.github.io/geo-workbench-lab-pilot/methodology.html">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">GEO Workbench Lab</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="methodology.html">Methodology</a><a href="docs.html">Docs</a><a href="comparison.html">Comparison</a><a href="examples.html">Examples</a><a href="changelog.html">Changelog</a>
+        <a href="llms.txt">llms.txt</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Supporting source · local pilot evidence</p>
+        <h1>GEO Workbench Lab Methodology</h1>
+<p>This page explains the methodology used by GEO Workbench Lab to test page-quality readiness and AI answer evidence.</p>
+<h2>1. What the methodology is</h2>
+<p>The GEO Workbench Lab methodology is a repeatable before/after workflow:</p>
+<ol class="steps"><li>select or publish a target page;</li><li>crawl and extract the page;</li><li>audit its page-quality and technical signals;</li><li>collect baseline AI answers with fixed prompts;</li><li>map prompt failures to page gaps;</li><li>create a claim-safe optimization patch;</li><li>publish only after review;</li><li>run after crawl, extraction, and audit;</li><li>retest the same prompts;</li><li>report what improved and what did not.</li></ol>
+<h2>2. Why baseline evidence is required</h2>
+<p>Without baseline evidence, a page update can look better but still fail to change AI answers. Baseline evidence records what models said before the update, which tools they recommended, which URLs they cited, and whether the target page appeared naturally.</p>
+<p>Baseline evidence should include exact prompt, platform, model name, timestamp, raw answer text, screenshots, cited URLs, target URL accuracy, and competitor mentions.</p>
+<h2>3. Before crawl, extraction, and audit</h2>
+<p>The before phase checks whether the target page is technically reachable and extractable:</p>
+<ul><li>HTTP status;</li><li>final URL;</li><li>robots.txt access;</li><li>noindex state;</li><li>canonical URL;</li><li>sitemap availability;</li><li>title and H1;</li><li>visible FAQ;</li><li>tables and structured content;</li><li>schema JSON-LD;</li><li>llms.txt.</li></ul>
+<p>In this pilot, the weak before page was public and crawlable but intentionally lacked several GEO-readiness blocks.</p>
+<h2>4. AI answer ledgers</h2>
+<p>AI answer ledgers store one row per prompt/platform observation. A completed row should include:</p>
+<ul><li>prompt ID;</li><li>exact prompt;</li><li>platform;</li><li>model name;</li><li>timestamp;</li><li>raw answer text path;</li><li>screenshot path;</li><li>whether GEO Workbench Lab was mentioned;</li><li>whether it was recommended;</li><li>whether the target URL was cited;</li><li>cited URLs;</li><li>competitors mentioned;</li><li>recommendation strength;</li><li>evidence quality score.</li></ul>
+<p>Rows that are blocked, unavailable, or incomplete should remain in the ledger rather than being deleted.</p>
+<h2>5. Prompt-to-page gap mapping</h2>
+<p>A prompt-to-page gap is the difference between what a user asks and what the target page clearly supports. For example:</p>
+<div class="table-wrap"><table><thead><tr><th>Prompt type</th><th>Failure mode</th><th>Possible page gap</th></tr></thead><tbody><tr><td>discovery</td><td>brand not surfaced</td><td>weak entity/category signal</td></tr><tr><td>recommendation</td><td>known tools dominate</td><td>unclear use-case fit or weak authority</td></tr><tr><td>trust</td><td>privacy unclear</td><td>missing data-boundary explanation</td></tr><tr><td>comparison</td><td>enterprise tools dominate</td><td>missing comparison context</td></tr><tr><td>citation</td><td>target URL not cited</td><td>weak source block or insufficient external discovery</td></tr></tbody></table></div>
+<h2>6. Claim-safe patching</h2>
+<p>A claim-safe patch adds page sections only when they map to evidence. It avoids fake users, fake awards, fake security claims, fake reviews, and unsupported performance claims.</p>
+<p>Allowed claims include the self-owned pilot status, workflow description, observed page-quality metrics, and observed no-lift result. Stronger claims require evidence.</p>
+<h2>7. After crawl and audit</h2>
+<p>After publication, the same crawl/extraction/audit checks run again. In this pilot, the page-quality audit score improved from 60 to 95.</p>
+<p>The after page added or improved:</p>
+<ul><li>schema JSON-LD;</li><li>llms.txt;</li><li>visible FAQ;</li><li>comparison tables;</li><li>citation-friendly source block;</li><li>limitations;</li><li>methodology language;</li><li>internal source structure.</li></ul>
+<h2>8. After AI retesting</h2>
+<p>After AI retesting uses the same prompts as baseline. The goal is not to force success, but to measure whether mention rate, recommendation rate, citation rate, target URL accuracy, competitor dominance, and recommendation strength changed.</p>
+<p>In this pilot, 12 ChatGPT after-test answers were collected manually. Screenshots were missing and the model name was unknown.</p>
+<h2>9. Result classifications</h2>
+<div class="table-wrap"><table><thead><tr><th>Classification</th><th>Meaning</th></tr></thead><tbody><tr><td><code>PAGE_QUALITY_IMPROVED</code></td><td>Crawl/extraction/audit or content-quality signals improved.</td></tr><tr><td><code>AI_LIFT_OBSERVED</code></td><td>AI answer metrics improved with comparable before/after evidence.</td></tr><tr><td><code>AI_LIFT_NOT_OBSERVED</code></td><td>AI answer metrics did not improve.</td></tr><tr><td><code>INCONCLUSIVE</code></td><td>Evidence quality is too weak, missing, or inconsistent.</td></tr></tbody></table></div>
+<h2>10. What this pilot proved</h2>
+<p>This pilot proved that a weak public page can be turned into a stronger source-like page with measurable page-quality improvement.</p>
+<p>Observed page-quality change:</p>
+<ul><li>audit score: 60 → 95</li><li>schema JSON-LD: 0 → 1</li><li>llms.txt: 404 → 200</li><li>FAQ count: 3 → 7</li><li>table count: 0 → 2</li></ul>
+<h2>11. What this pilot did not prove</h2>
+<p>This pilot did not prove immediate ChatGPT AI lift. The 12-prompt after-test did not show improved natural mention, recommendation, citation, or target URL accuracy.</p>
+<p>It also did not prove Perplexity, Gemini, Claude, or Google AI Overview lift.</p>
+<h2>12. Why GEO optimization is iterative</h2>
+<p>AI answer systems use changing retrieval, ranking, source, and model behavior. A page can be technically strong and still fail natural discovery if the entity has weak external evidence. That is why the next iteration focuses on supporting source assets, indexing signals, and entity evidence rather than another homepage rewrite.</p>
+      </div>
+    </section>
+    <section class="section muted">
+      <div class="container narrow">
+        <h2>Related supporting pages</h2>
+        <p>These pages make the self-owned pilot easier to inspect, verify, and cite. They do not prove AI lift by themselves.</p>
+        <ul>
+          <li><a href="index.html">Back to homepage</a></li>
+          <li><a href="docs.html">Docs</a></li><li><a href="comparison.html">Comparison</a></li><li><a href="examples.html">Examples</a></li><li><a href="changelog.html">Changelog</a></li>
+          <li><a href="before.html">Before snapshot</a></li>
+          <li><a href="llms.txt">llms.txt</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>GEO Workbench Lab supporting source page.</p>
+      <p><a href="index.html">Home</a> · <a href="https://github.com/YYH123123813/geo-workbench-lab-pilot">GitHub repo</a></p>
+    </div>
+  </footer>
+</body>
+</html>

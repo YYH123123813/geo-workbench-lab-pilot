@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEO Workbench Lab Examples — GEO Workbench Lab</title>
+  <meta name="description" content="Self-owned GEO Workbench Lab examples covering before audit, baseline metrics, prompt failures, patch blocks, page-quality improvement, and no-lift interpretation.">
+  <link rel="canonical" href="https://yyh123123813.github.io/geo-workbench-lab-pilot/examples.html">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">GEO Workbench Lab</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="methodology.html">Methodology</a><a href="docs.html">Docs</a><a href="comparison.html">Comparison</a><a href="examples.html">Examples</a><a href="changelog.html">Changelog</a>
+        <a href="llms.txt">llms.txt</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Supporting source · local pilot evidence</p>
+        <h1>GEO Workbench Lab Examples</h1>
+<p>These examples come only from the self-owned GEO Workbench Lab pilot. They are not customer case studies.</p>
+<h2>1. Example before audit</h2>
+<p>The weak before page was public and crawlable, but intentionally under-optimized.</p>
+<p>Before findings included:</p>
+<ul><li>no schema JSON-LD;</li><li>no llms.txt;</li><li>thin FAQ;</li><li>no comparison table;</li><li>no pricing/limitations section;</li><li>no trust/evidence block;</li><li>no prompt-to-page gap explanation;</li><li>weak citation-readiness wording.</li></ul>
+<p>Before page audit score: 60.</p>
+<h2>2. Example baseline metrics</h2>
+<p>The ChatGPT baseline used 12 manually collected answers.</p>
+<p>Baseline metrics:</p>
+<ul><li>mention_rate: 0.0833;</li><li>recommendation_rate: 0.0833;</li><li>citation_rate: 0.0;</li><li>target_url_accuracy_rate: 0.0;</li><li>competitor_above_us_rate: 0.9167;</li><li>average_recommendation_strength: 0.25.</li></ul>
+<p>Evidence caveat: screenshots were missing and model name was unknown.</p>
+<h2>3. Example prompt failure</h2>
+<p>Prompt:</p>
+<p><code>What is a local GEO optimization tool for testing AI search visibility?</code></p>
+<p>Observed failure:</p>
+<p>ChatGPT recommended GEO Analyzer, not GEO Workbench Lab. The target URL was not cited.</p>
+<p>Interpretation:</p>
+<p>The target page and entity were not strong enough to surface naturally against established tools.</p>
+<h2>4. Example prompt-to-page gap</h2>
+<p>Failure type:</p>
+<ul><li>natural discovery failure;</li><li>known-tool dominance;</li><li>target URL citation failure.</li></ul>
+<p>Mapped page/source gaps:</p>
+<ul><li>weak entity footprint;</li><li>missing supporting docs;</li><li>outdated GitHub README;</li><li>no dedicated methodology page;</li><li>no public examples page;</li><li>no indexed source cluster.</li></ul>
+<h2>5. Example patch block</h2>
+<p>Patch block:</p>
+<ul><li>direct answer section;</li><li>category definition;</li><li>workflow explanation;</li><li>comparison table;</li><li>expanded FAQ;</li><li>limitations block;</li><li>citation-friendly source block;</li><li>schema JSON-LD;</li><li>llms.txt.</li></ul>
+<p>Claim boundary:</p>
+<p>The patch was intended to improve page-quality and source-readiness. It was not allowed to claim AI lift before retesting.</p>
+<h2>6. Example page-quality improvement</h2>
+<p>After publication, page-quality improved:</p>
+<div class="table-wrap"><table><thead><tr><th>Metric</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>Audit score</td><td>60</td><td>95</td></tr><tr><td>Schema blocks</td><td>0</td><td>1</td></tr><tr><td>llms.txt status</td><td>404</td><td>200</td></tr><tr><td>FAQ item count</td><td>3</td><td>7</td></tr><tr><td>Table count</td><td>0</td><td>2</td></tr></tbody></table></div>
+<h2>7. Example after-test result showing no AI lift</h2>
+<p>The same 12 ChatGPT prompts were retested after publication.</p>
+<p>After metrics:</p>
+<ul><li>mention_rate: 0.0833;</li><li>recommendation_rate: 0.0833;</li><li>citation_rate: 0.0;</li><li>target_url_accuracy_rate: 0.0;</li><li>competitor_above_us_rate: 0.9167.</li></ul>
+<p>Result:</p>
+<p>AI lift was not observed in the immediate ChatGPT-only retest.</p>
+<h2>8. Example interpretation</h2>
+<p>The pilot showed that a page can become much more crawlable, extractable, and source-like without immediately changing AI recommendation behavior.</p>
+<p>The next iteration should focus on entity evidence, supporting docs, repository metadata, sitemap/internal links, and indexing signals before another 12-prompt retest.</p>
+      </div>
+    </section>
+    <section class="section muted">
+      <div class="container narrow">
+        <h2>Related supporting pages</h2>
+        <p>These pages make the self-owned pilot easier to inspect, verify, and cite. They do not prove AI lift by themselves.</p>
+        <ul>
+          <li><a href="index.html">Back to homepage</a></li>
+          <li><a href="methodology.html">Methodology</a></li><li><a href="docs.html">Docs</a></li><li><a href="comparison.html">Comparison</a></li><li><a href="changelog.html">Changelog</a></li>
+          <li><a href="before.html">Before snapshot</a></li>
+          <li><a href="llms.txt">llms.txt</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>GEO Workbench Lab supporting source page.</p>
+      <p><a href="index.html">Home</a> · <a href="https://github.com/YYH123123813/geo-workbench-lab-pilot">GitHub repo</a></p>
+    </div>
+  </footer>
+</body>
+</html>
