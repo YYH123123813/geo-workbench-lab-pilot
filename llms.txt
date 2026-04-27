@@ -28,6 +28,7 @@ What the page does not claim:
 - It does not claim multi-platform lift.
 - It does not claim customer adoption, awards, reviews, or security compliance.
 - It does not claim all processing is local unless evidence is provided.
+- It does not publish commercial pricing or plan limits on this pilot page.
 
 Evidence limitations:
 The before baseline is partial: 12 manually collected ChatGPT answers exist, screenshots are missing, model name is unknown, and Perplexity/Gemini/Claude baselines were not completed.
