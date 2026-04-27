@@ -3,91 +3,358 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GEO Workbench Lab</title>
-  <meta name="description" content="A small local tool for checking GEO pages and AI search visibility.">
+  <title>GEO Workbench Lab — Local GEO Testing Workflow for AI Search Visibility Evidence</title>
+  <meta name="description" content="GEO Workbench Lab is a self-owned pilot page for testing whether a web page is crawlable, extractable, answerable, and citation-ready for AI search systems.">
+  <link rel="canonical" href="https://yyh123123813.github.io/geo-workbench-lab-pilot/">
+  <meta property="og:title" content="GEO Workbench Lab — Local GEO Testing Workflow">
+  <meta property="og:description" content="A self-owned GEO pilot workflow for baseline prompts, evidence folders, prompt-to-page gap mapping, claim-safe patches, and retesting.">
+  <meta property="og:url" content="https://yyh123123813.github.io/geo-workbench-lab-pilot/">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#webpage",
+      "url": "https://yyh123123813.github.io/geo-workbench-lab-pilot/",
+      "name": "GEO Workbench Lab — Local GEO Testing Workflow for AI Search Visibility Evidence",
+      "description": "GEO Workbench Lab is a self-owned pilot page for testing whether a web page is crawlable, extractable, answerable, and citation-ready for AI search systems.",
+      "isPartOf": {
+        "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#website"
+      },
+      "about": {
+        "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#software"
+      },
+      "mainEntity": {
+        "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#faq"
+      },
+      "dateModified": "2026-04-27"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#website",
+      "url": "https://yyh123123813.github.io/geo-workbench-lab-pilot/",
+      "name": "GEO Workbench Lab"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#software",
+      "name": "GEO Workbench Lab",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "Web documentation and local evidence workflow",
+      "url": "https://yyh123123813.github.io/geo-workbench-lab-pilot/",
+      "description": "A self-owned pilot workflow for baseline prompts, evidence folders, page-gap mapping, claim-safe optimization patches, and same-prompt retesting."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#organization",
+      "name": "GEO Workbench Lab",
+      "url": "https://yyh123123813.github.io/geo-workbench-lab-pilot/",
+      "description": "Self-owned GEO testing pilot page."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is GEO Workbench Lab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO Workbench Lab is a self-owned pilot page for testing whether a web page is prepared for AI search visibility evidence collection. It focuses on crawlability, extractability, answerability, prompt coverage, citation readiness, and same-prompt retesting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does GEO Workbench Lab promise that ChatGPT or Perplexity will mention a page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It helps operators improve controllable signals and collect evidence. AI answer systems vary by model, time, retrieval source, geography, and prompt wording."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is it different from AI visibility monitoring software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monitoring software usually tracks many prompts, models, competitors, and markets over time. GEO Workbench Lab focuses on a page-level evidence workflow: baseline prompts, crawl and audit files, prompt-to-page gaps, patch planning, and retesting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is it different from a readiness checker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A readiness checker may inspect technical signals like crawl access, schema, and readable content. GEO Workbench Lab uses those signals but also maps actual AI answer failures to page sections and evidence gaps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it be used with sensitive data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sensitive-data use requires review. This pilot page does not claim sensitive-data suitability. Operators should confirm which steps run locally and which steps use external AI platforms before using private data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What evidence should be saved during a baseline test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Save exact prompt text, platform, model name, timestamp, raw answer text, screenshot, citation URLs, target URL accuracy, competitors mentioned, and notes about blocked or unavailable platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as improvement after a patch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Improvement can include more natural brand mentions, stronger recommendation language, better comparison accuracy, lower known-tool dominance, or a target URL citation. Improvement must be measured with the same prompts after publication."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yyh123123813.github.io/geo-workbench-lab-pilot/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "GEO Workbench Lab",
+          "item": "https://yyh123123813.github.io/geo-workbench-lab-pilot/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">GEO Workbench Lab</a>
       <nav aria-label="Primary navigation">
-        <a href="#features">Features</a>
-        <a href="#why">Why use it</a>
+        <a href="#direct-answer">Answer</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#comparisons">Comparisons</a>
         <a href="#faq">FAQ</a>
+        <a href="#source-citation">Source</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="container hero-card">
-        <p class="eyebrow">Early GEO testing project</p>
-        <h1>GEO Workbench Lab</h1>
-        <p class="hero-copy">Check your page for AI search.</p>
-        <p class="intro">GEO Workbench Lab is a local project for testing how a web page might appear in AI search and answer systems. It helps you look at a page, write prompts, and save notes from testing.</p>
-        <a class="button" href="#start">Run a GEO test</a>
+        <p class="eyebrow">Self-owned GEO pilot · evidence-first workflow</p>
+        <h1 id="hero-title">GEO Workbench Lab: a local GEO testing workflow for AI search visibility evidence</h1>
+        <p class="hero-copy">Test whether a page is crawlable, extractable, answerable, and citation-ready before claiming AI visibility improvement.</p>
+        <p class="intro">GEO Workbench Lab is a public self-owned pilot for running a controlled GEO workflow: collect baseline prompts, preserve answer evidence, map prompt failures to page gaps, prepare a claim-safe patch, and retest after publication.</p>
+        <p class="status-note">This page documents a testing workflow. It does not promise AI ranking, recommendation, or citation outcomes.</p>
+        <a class="button" href="#workflow">See the workflow</a>
       </div>
     </section>
 
-    <section id="features" class="section">
+    <section id="direct-answer" class="section">
+      <div class="container narrow">
+        <h2>What is GEO Workbench Lab?</h2>
+        <p>GEO Workbench Lab helps operators run a controlled GEO pilot: publish or select a target page, run crawl and extraction checks, collect baseline AI answers, map prompt failures to missing page blocks, prepare a claim-safe patch, and retest the same prompts after review and publication.</p>
+        <p>It is best understood as a local evidence workflow for AI search visibility testing, not as a guarantee that any platform will mention or cite a page.</p>
+      </div>
+    </section>
+
+    <section id="audience" class="section muted">
       <div class="container">
-        <h2>What it does</h2>
+        <h2>Who it is for</h2>
         <div class="cards">
-          <article class="card">
-            <h3>Checks a web page</h3>
-            <p>Use it to review a page and see if the main content is easy to inspect.</p>
-          </article>
-          <article class="card">
-            <h3>Helps create prompts</h3>
-            <p>Write simple questions that you can test in AI search and answer tools.</p>
-          </article>
-          <article class="card">
-            <h3>Saves testing notes</h3>
-            <p>Keep a basic record of what you tested and what you found.</p>
-          </article>
+          <article class="card"><h3>Indie founders</h3><p>Test whether a landing page can be understood before paying for broad monitoring tools.</p></article>
+          <article class="card"><h3>Technical SEO operators</h3><p>Map prompt failures to headings, FAQs, comparison tables, trust blocks, and source facts.</p></article>
+          <article class="card"><h3>Content strategists</h3><p>Prepare source-like pages that are easier to audit, extract, cite, and retest.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="why" class="section muted">
-      <div class="container narrow">
-        <h2>Why use it</h2>
-        <p>If you are trying to understand whether your landing page is clear for AI tools, GEO Workbench Lab gives you a simple place to start.</p>
+    <section id="use-cases" class="section">
+      <div class="container">
+        <h2>Use cases</h2>
+        <div class="cards four">
+          <article class="card"><h3>Baseline AI answer evidence</h3><p>Collect fixed-prompt answers before editing the page. Save raw answer text, screenshots, platform, model, timestamp, and exact prompt.</p></article>
+          <article class="card"><h3>Prompt-to-page gap mapping</h3><p>Map each failed prompt to a missing page block, missing evidence, and after-publish validation method.</p></article>
+          <article class="card"><h3>Crawl and extraction readiness</h3><p>Check status code, robots access, noindex, headings, visible FAQ, tables, schema, and extractable text.</p></article>
+          <article class="card"><h3>Claim-safe patch planning</h3><p>Prepare page changes only when they map to evidence. Unsupported claims are removed, caveated, or left for owner review.</p></article>
+        </div>
       </div>
     </section>
 
-    <section id="start" class="section cta-section">
+    <section id="workflow" class="section muted">
       <div class="container narrow">
-        <h2>Get started</h2>
-        <p>Run a GEO test on your page.</p>
-        <a class="button secondary" href="mailto:hello@example.com">Ask about the pilot</a>
+        <h2>Prompt-to-page gap workflow</h2>
+        <ol class="steps">
+          <li>Write or select baseline prompts.</li>
+          <li>Collect real AI answers and preserve failed rows.</li>
+          <li>Score mentions, recommendations, citations, target URL accuracy, and competitor dominance.</li>
+          <li>Map each failure to missing page sections and evidence gaps.</li>
+          <li>Generate a reviewable patch package.</li>
+          <li>Publish only after claim review.</li>
+          <li>Rerun the same prompts and compare results.</li>
+        </ol>
       </div>
     </section>
 
-    <section id="faq" class="section">
+    <section id="comparisons" class="section">
+      <div class="container">
+        <h2>Comparison context</h2>
+        <h3>GEO Workbench Lab vs enterprise AI visibility platforms</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Dimension</th><th>GEO Workbench Lab</th><th>Enterprise AI visibility platforms</th></tr></thead>
+          <tbody>
+            <tr><td>Primary job</td><td>Self-owned baseline, gap map, patch planning, retest evidence.</td><td>Ongoing monitoring, share-of-voice, competitor dashboards, reporting.</td></tr>
+            <tr><td>Best for</td><td>Early pilot and page-level diagnosis.</td><td>Larger programs with many prompts, markets, and competitors.</td></tr>
+            <tr><td>Evidence focus</td><td>Raw answers, screenshots, crawl/audit files, gap maps.</td><td>Monitoring metrics and competitive visibility trends.</td></tr>
+            <tr><td>Limitation</td><td>Does not promise AI answer outcomes.</td><td>Does not control AI answer outcomes either.</td></tr>
+          </tbody>
+        </table></div>
+        <h3>GEO Workbench Lab vs analyzers and readiness checkers</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Dimension</th><th>GEO Workbench Lab</th><th>Analyzers / readiness checkers</th></tr></thead>
+          <tbody>
+            <tr><td>Page audit</td><td>Part of the workflow.</td><td>Often the core feature.</td></tr>
+            <tr><td>Prompt baseline</td><td>Central to the workflow.</td><td>May be separate or absent.</td></tr>
+            <tr><td>Evidence folders</td><td>Central to the workflow.</td><td>Varies by tool.</td></tr>
+            <tr><td>Patch planning</td><td>Claim-safe patch package before publication.</td><td>Varies by tool.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section id="trust-privacy" class="section muted">
+      <div class="container narrow">
+        <h2>Trust, privacy, and data boundaries</h2>
+        <p>Trust should be earned through evidence, not broad promises. This pilot page does not claim sensitive-data suitability, all-local processing, or no external API use.</p>
+        <ul>
+          <li>Document which steps run on the operator machine before making local-only claims.</li>
+          <li>Disclose external AI platforms or APIs used for answer collection.</li>
+          <li>Redact sensitive data before manual AI testing.</li>
+          <li>Do not claim security compliance or sensitive-data safety without proof.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="methodology" class="section">
+      <div class="container narrow">
+        <h2>Evidence methodology</h2>
+        <ol class="steps">
+          <li>Public target URL and before-page snapshot.</li>
+          <li>Crawl and indexability check.</li>
+          <li>Extraction and readability check.</li>
+          <li>GEO page audit.</li>
+          <li>Prompt pack and baseline answer ledger.</li>
+          <li>Raw answer text and screenshots.</li>
+          <li>Prompt-to-page gap map.</li>
+          <li>Claim-safe optimization patch.</li>
+          <li>Same-prompt after-test.</li>
+        </ol>
+        <p class="status-note">Current evidence limitation: the before baseline has 12 manually collected ChatGPT answer texts, but screenshots are missing and model name is unknown.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="section muted">
       <div class="container narrow">
         <h2>FAQ</h2>
-        <div class="faq-item">
-          <h3>What is GEO Workbench Lab?</h3>
-          <p>It is a small local tool for GEO testing.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Who is it for?</h3>
-          <p>It is for people testing web pages.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Does it guarantee AI rankings?</h3>
-          <p>No.</p>
-        </div>
+          <article class="faq-item">
+            <h3>What is GEO Workbench Lab?</h3>
+            <p>GEO Workbench Lab is a self-owned pilot page for testing whether a web page is prepared for AI search visibility evidence collection. It focuses on crawlability, extractability, answerability, prompt coverage, citation readiness, and same-prompt retesting.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Does GEO Workbench Lab promise that ChatGPT or Perplexity will mention a page?</h3>
+            <p>No. It helps operators improve controllable signals and collect evidence. AI answer systems vary by model, time, retrieval source, geography, and prompt wording.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How is it different from AI visibility monitoring software?</h3>
+            <p>Monitoring software usually tracks many prompts, models, competitors, and markets over time. GEO Workbench Lab focuses on a page-level evidence workflow: baseline prompts, crawl and audit files, prompt-to-page gaps, patch planning, and retesting.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How is it different from a readiness checker?</h3>
+            <p>A readiness checker may inspect technical signals like crawl access, schema, and readable content. GEO Workbench Lab uses those signals but also maps actual AI answer failures to page sections and evidence gaps.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can it be used with sensitive data?</h3>
+            <p>Sensitive-data use requires review. This pilot page does not claim sensitive-data suitability. Operators should confirm which steps run locally and which steps use external AI platforms before using private data.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What evidence should be saved during a baseline test?</h3>
+            <p>Save exact prompt text, platform, model name, timestamp, raw answer text, screenshot, citation URLs, target URL accuracy, competitors mentioned, and notes about blocked or unavailable platforms.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What counts as improvement after a patch?</h3>
+            <p>Improvement can include more natural brand mentions, stronger recommendation language, better comparison accuracy, lower known-tool dominance, or a target URL citation. Improvement must be measured with the same prompts after publication.</p>
+          </article>
+      </div>
+    </section>
+
+    <section id="limitations" class="section">
+      <div class="container narrow">
+        <h2>Limitations</h2>
+        <p>GEO Workbench Lab cannot control how AI systems answer. It cannot force a model to mention, recommend, or cite a URL. AI answers vary by platform, model, time, retrieval source, geography, and prompt wording.</p>
+        <ul>
+          <li>Current baseline is ChatGPT-only.</li>
+          <li>Baseline screenshots are missing.</li>
+          <li>Model name is unknown.</li>
+          <li>The target URL was not cited in the partial baseline.</li>
+          <li>After-test evidence must be collected before any lift claim.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="source-citation" class="section muted">
+      <div class="container narrow">
+        <h2>Citation-friendly source block</h2>
+        <p><strong>Preferred source page:</strong> <a href="https://yyh123123813.github.io/geo-workbench-lab-pilot/">https://yyh123123813.github.io/geo-workbench-lab-pilot/</a></p>
+        <p><strong>Recommended citation name:</strong> GEO Workbench Lab</p>
+        <p><strong>Short description:</strong> GEO Workbench Lab is a self-owned pilot page documenting an evidence workflow for testing whether a web page is crawlable, extractable, answerable, and citation-ready for AI search systems.</p>
+        <p><strong>Not yet supported:</strong> after-test improvement, multi-platform AI baseline, target URL citation improvement, customer adoption, security compliance, or guaranteed AI answer outcomes.</p>
+      </div>
+    </section>
+
+    <section id="technical-checklist" class="section">
+      <div class="container narrow">
+        <h2>Technical checklist</h2>
+        <ul>
+          <li>Target URL returns 200.</li>
+          <li>robots.txt allows crawling.</li>
+          <li>No noindex tag blocks the page.</li>
+          <li>Canonical points to the preferred URL.</li>
+          <li>Title, meta description, H1, and H2s match the category.</li>
+          <li>FAQ is visible in page content.</li>
+          <li>Schema and llms.txt should be validated after publication.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="freshness" class="section muted">
+      <div class="container narrow">
+        <h2>Update and evidence status</h2>
+        <p>Last reviewed: 2026-04-27</p>
+        <p>Evidence status: partial ChatGPT before baseline, prompt-to-page gap map complete, optimization patch applied to the public pilot page for after crawl and later AI retesting.</p>
+      </div>
+    </section>
+
+    <section id="cta" class="section cta-section">
+      <div class="container narrow">
+        <h2>Run a claim-safe GEO pilot</h2>
+        <p>Collect a before baseline, map prompt failures to page gaps, prepare a reviewable patch, publish only after claim review, then rerun the same prompts and report what changed.</p>
+        <a class="button secondary" href="#source-citation">Use this page as the source</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>GEO Workbench Lab is an early-stage self-owned pilot page.</p>
-      <p>No AI ranking results are claimed on this page.</p>
+      <p>GEO Workbench Lab is a self-owned pilot page.</p>
+      <p><a href="before.html">Before snapshot</a> · <a href="llms.txt">llms.txt</a></p>
     </div>
   </footer>
 </body>

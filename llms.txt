@@ -1,0 +1,36 @@
+# GEO Workbench Lab
+
+Public URL: https://yyh123123813.github.io/geo-workbench-lab-pilot/
+
+Short summary:
+GEO Workbench Lab is a self-owned pilot page documenting an evidence workflow for testing whether a web page is crawlable, extractable, answerable, and citation-ready for AI search systems.
+
+Primary purpose:
+Help operators run a claim-safe GEO pilot: collect baseline prompts, save raw answer evidence, run crawl/extraction/audit checks, map prompt failures to page gaps, generate a reviewable optimization patch, and retest the same prompts after publication.
+
+Key sections:
+- Direct answer and category definition
+- Target audience and use cases
+- Prompt-to-page gap workflow
+- Comparison context vs monitoring platforms and readiness checkers
+- Trust/privacy evidence caveats
+- Evidence methodology
+- Limitations
+- Citation-friendly source block
+- Technical checklist
+
+Preferred citation page:
+https://yyh123123813.github.io/geo-workbench-lab-pilot/
+
+What the page does not claim:
+- It does not promise AI answer outcomes.
+- It does not promise target URL citations.
+- It does not claim multi-platform lift.
+- It does not claim customer adoption, awards, reviews, or security compliance.
+- It does not claim all processing is local unless evidence is provided.
+
+Evidence limitations:
+The before baseline is partial: 12 manually collected ChatGPT answers exist, screenshots are missing, model name is unknown, and Perplexity/Gemini/Claude baselines were not completed.
+
+Last updated:
+2026-04-27
